@@ -64,6 +64,9 @@ if err != nil {
 
 fmt.Printf("Access Token: %s\n", tokens.AccessToken)
 fmt.Printf("Refresh Token: %s\n", tokens.RefreshToken)
+fmt.Printf("Scope: %s\n", tokens.Scope)
+fmt.Printf("Client ID: %s\n", tokens.ClientID)
+fmt.Printf("Client Secret: %s\n", tokens.ClientSecret) // Berisi hashed secret atau secret aplikasi
 ```
 
 ### 4. Mendapatkan Info Pengguna
