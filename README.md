@@ -6,9 +6,7 @@ SDK resmi Go untuk integrasi dengan Xepeng OAuth Service. Paket ini mendukung al
 
 - ✅ OAuth 2.0 Authorization Code Flow dengan PKCE (S256).
 - ✅ Penukaran Authorization Code menjadi Access & Refresh Token.
-- ✅ Refresh Access Token otomatis (atau manual).
-- ✅ Ambil Informasi Profil Pengguna (User Info).
-- ✅ Revoke Token.
+- ✅ Refresh Access Token.
 
 ## Instalasi
 
@@ -69,18 +67,7 @@ fmt.Printf("Client ID: %s\n", tokens.ClientID)
 fmt.Printf("Client Secret: %s\n", tokens.ClientSecret) // Berisi hashed secret atau secret aplikasi
 ```
 
-### 4. Mendapatkan Info Pengguna
-
-```go
-userInfo, err := client.GetUserInfo(tokens.AccessToken)
-if err != nil {
-    // Tangani error
-}
-
-fmt.Printf("User: %v\n", userInfo)
-```
-
-### 5. Refresh Token
+### 4. Refresh Token
 
 ```go
 newTokens, err := client.RefreshToken(tokens.RefreshToken)
