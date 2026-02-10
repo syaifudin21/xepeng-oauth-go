@@ -18,6 +18,9 @@ type TokenResponse struct {
 	RefreshToken string `json:"refresh_token"`
 	ExpiresIn    int    `json:"expires_in"`
 	TokenType    string `json:"token_type"`
+	Scope        string `json:"scope"`
+	ClientID     string `json:"client_id"`
+	ClientSecret string `json:"client_secret"`
 	ExpiresAt    int64  `json:"-"`
 }
 
